@@ -1,0 +1,45 @@
+h1
+{
+    text-align: center;
+}
+#side-side
+{
+    width: 100%;
+}
+#last 
+{
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 20px;
+    float: right;
+    text-align: right;
+}
+h3
+{
+    font-weight: 500;
+}
+ol
+{
+    border: solid;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 15px;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul
+{
+    border: dashed;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman;
+    list-style-position:inside;
+    font-weight: 300;
+}
+a:hover
+{
+    text-decoration: underline;
+}

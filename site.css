@@ -1,0 +1,47 @@
+#container
+{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h1
+{
+    color: blue;
+    background-color: aqua;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+h2
+{
+    color: blue;
+    background-color: aqua;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+h3
+{
+    color: blue;
+    background-color: aqua;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+h4
+{
+    color: blue;
+    background-color: aqua;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+a
+{
+    color: cadetblue;
+    text-decoration: none;
+}
+a:hover
+{
+    color: blueviolet;
+}
+a:visited
+{
+    color: darkviolet;
+}
