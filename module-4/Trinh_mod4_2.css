@@ -1,0 +1,44 @@
+h1
+{
+    text-align: center;
+    color:  rgba(244, 23, 8, 0.8);
+}
+h3
+{
+    color:  rgba(142, 8, 244, 0.968);
+    text-align: center;
+}
+#img
+{
+    width: 300px;
+    height: 300px;
+}
+figcaption
+{
+    font-style: italic;
+    font-size: .75em;
+    color:  rgba(142, 8, 244, 0.968);
+}
+#image-gallery
+{
+    margin-top: 10%;
+    text-align: center;
+}
+.image-gallery
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+#link
+{
+    text-align: right;
+    padding-top: 40px;
+}
