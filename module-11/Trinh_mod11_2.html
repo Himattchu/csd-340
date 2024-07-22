@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name= "description" content="Assignment 11.2" />
+    <meta name= "author" content=" Matthew Trinh " />
+    <link rel="stylesheet" href="Trinh_mod11_2.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+  <h1>Assignment 11.2: JavaScript -Part 3</h1>
+  <p>This is an interactive To Do List. Type in your first item in the text box, then click Add. 
+    Click the Display button to see current items in the list. Click on the Delete Last Entry if you'd liek to 
+    remove the last entry.
+  </p>
+  <div class="container">
+    <input type="text" id="entryInput" placeholder="Enter text...">
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLast()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+  </div>
+
+  <script>
+    let entries = [];
+
+    function addEntry() {
+      let entryInput = document.getElementById('entryInput');
+      let entryValue = entryInput.value.trim();
+      if (entryValue !== '') {
+        entries.push(entryValue);
+        entryInput.value = '';
+        alert(`Added "${entryValue}" to the array.`);
+      }
+    }
+
+    function deleteLast() {
+      if (entries.length > 0) {
+        let deletedEntry = entries.pop();
+        alert(`Deleted entry: "${deletedEntry}"`);
+      } else {
+        alert('No entries to delete.');
+      }
+    }
+
+    function displayEntries() {
+      if (entries.length > 0) {
+        let displayString = '';
+        for (let i = 0; i < entries.length; i++) {
+          displayString += `${i + 1}. ${entries[i]}\n`;
+        }
+        alert(`Entries:\n${displayString}`);
+      } else {
+        alert('Array is empty.');
+      }
+    }
+  </script>
+  <a href="C:\Users\Matthew Tranh\csd-340\index.html">Landing Page </a>
+</body>
+</html>
