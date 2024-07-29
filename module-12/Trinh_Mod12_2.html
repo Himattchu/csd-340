@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name= "description" content="Assignment 3.3" />
+    <meta name= "author" content=" Matthew Trinh " />
+    <link rel="stylesheet" href="Trinh__Mod12_2.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+            <div id = left>
+                <h3>Top 10 Favorite Books/Mangas</h3>
+                <div class="button">
+                    <button id="topToBottom" class="btn">Top to Bottom</button>
+                    <button id="bottomToTop" class="btn">Bottom to Top</button>
+                </div>
+                <ol id="favBooks">
+                    <li>Shokugeki no Souma: Food Wars</li>
+                    <li>The Promised Neverland</li>
+                    <li>Percy Jackson the Lightning Thief</li>
+                    <li>Rich Dad Poor Dad</li>
+                    <li>How to talk to Anybody</li>
+                    <li>Millionaire Mindset anad Habits for Success</li>
+                    <li>Lead Like Jesus</li>
+                    <li>Hunter x Hunter</li>
+                    <li>The Psychology of Money</li>
+                    <li>The Art of being Alone</li>
+                </ol>
+                <div id = "arrayDisplay"></div>
+            </div>
+            <div id="right">
+                <h3>5 Things I've Learned Since the Course Started</h3>
+                <ul>
+                    <li>Do Everything on Visual Studios, it makes everything so much easier</li>
+                    <li>HTML may seem daunting at first, but once you understand, it isn't that bad.
+                        just a lot of opening and closing "<>"
+                    </li>
+                    <li>With VSCode linking different files is so easy and a surefire way ensure that the proper file is being linked</li>
+                    <li>While you can code and format text within the HTML file, it is a better practice to have the formatting in a ".css" file</li>
+                    <li>Elements listed in the head are unseeable by the user, but give valuable information about the site.</li>
+                </ul>
+            </div>
+        <div id = "last"> 
+            <a href="C:\Users\Matthew Tranh\csd-340\index.html">Landing Page </a>
+        </div>
+    </div>
+    <script>
+        function getBooksArray() {
+            const listItems = document.querySelectorAll('#favBooks li');
+            return Array.from(listItems).map(li => li.textContent);
+        }
+
+       function displayArray(arr) {
+            const arrayDisplay = document.getElementById('arrayDisplay');
+            arrayDisplay.innerHTML = arr.join('<br>');
+        }
+
+        const books = getBooksArray();
+        displayArray(books);
+
+        const topToBottomButton = document.getElementById('topToBottom');
+        const bottomToTopButton = document.getElementById('bottomToTop');
+
+        topToBottomButton.addEventListener('click', () => {
+            const sortedArray = getBooksArray().slice().sort(); 
+            displayArray(sortedArray); 
+        });
+
+        bottomToTopButton.addEventListener('click', () => {
+            const sortedArray = getBooksArray().slice().sort((a, b) => b.localeCompare(a));
+            displayArray(sortedArray);
+        });
+    </script>
+</body>
+</html>
